@@ -1,0 +1,64 @@
+============================
+𩸕
+171541
+length: 2
+codePointCount: 1
+UTF-16変換可能      : true
+UTF-8変換可能       : true
+windows-31j変換可能 : false
+Shift_JIS変換可能   : false
+UTF-16バイト列      : fe ff d8 67 de 15 
+UTF-8バイト列       : f0 a9 b8 95 
+
+============================
+か゚
+12363
+length: 2
+codePointCount: 2
+UTF-16変換可能      : true
+UTF-8変換可能       : true
+windows-31j変換可能 : false
+Shift_JIS変換可能   : false
+UTF-16バイト列      : fe ff 30 4b 30 9a 
+UTF-8バイト列       : e3 81 8b e3 82 9a 
+
+============================
+か゛
+12363
+length: 2
+codePointCount: 2
+UTF-16変換可能      : true
+UTF-8変換可能       : true
+windows-31j変換可能 : true
+Shift_JIS変換可能   : true
+UTF-16バイト列      : fe ff 30 4b 30 9b 
+UTF-8バイト列       : e3 81 8b e3 82 9b 
+windows-31jバイト列 : 82 a9 81 4a 
+Shift_JISバイト列   : 82 a9 81 4a 
+
+============================
+〜
+12316
+length: 1
+codePointCount: 1
+UTF-16変換可能      : true
+UTF-8変換可能       : true
+windows-31j変換可能 : false
+Shift_JIS変換可能   : true
+UTF-16バイト列      : fe ff 30 1c 
+UTF-8バイト列       : e3 80 9c 
+Shift_JISバイト列   : 81 60 
+
+============================
+～
+65374
+length: 1
+codePointCount: 1
+UTF-16変換可能      : true
+UTF-8変換可能       : true
+windows-31j変換可能 : true
+Shift_JIS変換可能   : false
+UTF-16バイト列      : fe ff ff 5e 
+UTF-8バイト列       : ef bd 9e 
+windows-31jバイト列 : 81 60 
+
