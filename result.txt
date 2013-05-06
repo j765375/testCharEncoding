@@ -1,6 +1,6 @@
 ============================
 𩸕
-171541
+Unicodeコードポイント: 29e15 
 length: 2
 codePointCount: 1
 UTF-16変換可能      : true
@@ -12,7 +12,7 @@ UTF-8バイト列       : f0 a9 b8 95
 
 ============================
 か゚
-12363
+Unicodeコードポイント: 304b 
 length: 2
 codePointCount: 2
 UTF-16変換可能      : true
@@ -24,7 +24,7 @@ UTF-8バイト列       : e3 81 8b e3 82 9a
 
 ============================
 か゛
-12363
+Unicodeコードポイント: 304b 309b 
 length: 2
 codePointCount: 2
 UTF-16変換可能      : true
@@ -38,7 +38,7 @@ Shift_JISバイト列   : 82 a9 81 4a
 
 ============================
 〜
-12316
+Unicodeコードポイント: 301c 
 length: 1
 codePointCount: 1
 UTF-16変換可能      : true
@@ -51,7 +51,7 @@ Shift_JISバイト列   : 81 60
 
 ============================
 ～
-65374
+Unicodeコードポイント: ff5e 
 length: 1
 codePointCount: 1
 UTF-16変換可能      : true

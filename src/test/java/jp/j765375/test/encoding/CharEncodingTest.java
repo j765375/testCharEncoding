@@ -5,6 +5,8 @@ import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
+import java.text.BreakIterator;
+import java.text.spi.BreakIteratorProvider;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -56,7 +58,7 @@ public class CharEncodingTest {
 		// windows-31jでは変換できるが、Shift_JISでは変換できない。
 		print("\uFF5E");
 	}
-	
+
 	private void print(String s) {
 		StringWriter result = new StringWriter();
 		// printlnが使いたいのでPrintWriterを使う。
@@ -64,7 +66,7 @@ public class CharEncodingTest {
 		try {
 			w.println("============================");
 			w.println(s);
-			w.println(s.codePointAt(0));
+			w.println("Unicodeコードポイント: " + getUnicodeCodePoint(s));
 			// 文字数情報
 			w.println("length: " + s.length());
 			w.println("codePointCount: " + s.codePointCount(0, s.length()));
@@ -102,25 +104,32 @@ public class CharEncodingTest {
 	}
 
 	private String toHexString(byte[] byteArray) {
-
 		// 結果を入れるためのバッファを用意
 		StringBuilder sb = new StringBuilder();
 
 		int i;
 		for (byte b : byteArray) {
-
 			// バイトを自然数に変換... するときは注意が必要
 			// もし b が負数の場合を考慮して、0xFFとの論理積をとり下位8bitの値だけをみるように
 			i = 0xFF & (int) b;
 
 			// これを、16進数で表現
 			String str = Integer.toHexString(i);
-
 			// バッファに追加
 			sb.append(str).append(" ");
 		}
-
 		return sb.toString();
+	}
 
+	private String getUnicodeCodePoint(String s) {
+		StringBuilder sb = new StringBuilder();
+		BreakIterator bi = BreakIterator.getCharacterInstance();
+		bi.setText(s);
+		int start = bi.first();
+		for (int end = bi.next(); end != BreakIterator.DONE; start = end, end = bi
+				.next()) {
+			sb.append(Integer.toHexString(s.codePointAt(start))).append(" ");
+		}
+		return sb.toString();
 	}
 }
